@@ -15,9 +15,10 @@ public class CharacterAttributes : MonoBehaviour {
 	
 	}
 
-	void ApplyDamage(float damage) {
+	public void ApplyDamage(float damage) {
 		health -= damage;
-		if (damage < 0) {
+		Debug.Log(health);
+		if (health <= 0) {
 			SendMessage("OnDeath");
 		}
 	}
